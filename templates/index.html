@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meme Generator</title>
+</head>
+
+<body>
+
+    <h1>AI Meme Generator</h1>
+
+    <p>
+        Enter a situation and generate a context-aware meme caption.
+    </p>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="user_input"
+            placeholder="Example: When the Wi-Fi disconnects during a meeting"
+            required
+        >
+
+        <button type="submit">
+            Generate Meme
+        </button>
+
+    </form>
+
+    {% if caption %}
+
+        <h2>Generated Caption</h2>
+
+        <p>{{ caption }}</p>
+
+    {% endif %}
+
+</body>
+</html>
